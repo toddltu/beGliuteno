@@ -29,6 +29,8 @@
     <?= $Wcms->css() ?>
 </head>
 <body>
+<?= $Wcms->settings() ?>
+<?= $Wcms->alerts() ?>
 <!-- nav bar -->
 <div class="uk-background-default">
     <div class="uk-container">
@@ -38,6 +40,13 @@
                     <img data-src="./assets/img/logo.jpg" uk-img />
                 </a>
             </div>
+            <?php if($Wcms->loggedIn) { ?>
+            <div class="uk-navbar-right">
+                <ul class="uk-navbar-nav">
+                    <?= $Wcms->menu() ?>
+                </ul>
+            </div>
+            <?php } ?>
         </nav>
     </div>
 </div>
@@ -45,12 +54,12 @@
 <!-- section head -->
 <section class="sec-head uk-background-cover uk-section" data-src="./assets/img/header.jpg" uk-img>
     <div class="uk-container">
-        <h1>Jauskitės geriau valgydami viską</h1>
-        <div class="h1-u underText">mėgaukis skaniu gyvenimu be gliuteno</div>
-        <div class="blocks uk-child-width-1-1@s uk-child-width-expand@m uk-margin-large-top" uk-grid>
-            <div><span class="block-item">Viskas atrinkta rankomis</span></div>
-            <div><span class="block-item">Viskas atrinkta rankomis</span></div>
-            <div><span class="block-item">Viskas atrinkta rankomis</span></div>
+        <h1><?= blockFixer('head_title')?></h1> <!-- head_title -->
+        <div class="h1-u underText"><?= blockFixer('head_underText')?></div> <!-- head_underText -->
+        <div class="blocks uk-child-width-1-1@s uk-child-width-expand@m uk-margin-large-top" uk-grid> <!-- plan b head_block -->
+            <div><span class="block-item"><?= blockFixer('head_blocks_a')?></span></div> <!-- head_blocks_a -->
+            <div><span class="block-item"><?= blockFixer('head_blocks_b')?></span></div> <!-- head_blocks_b -->
+            <div><span class="block-item"><?= blockFixer('head_blocks_c')?></span></div> <!-- head_blocks_c -->
         </div>
     </div>
 </section>
@@ -61,21 +70,10 @@
         <div class="uk-container">
             <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                 <div>
-                    <h2>Mėgaukitės maistu, kuris padeda jums jaustis gerai!</h2>
-                    <div class="h2-u underText">
-                        Viskas prasidėjo nuo diagnuozuotos celiakijos.<br/><br/>
-                        Perėjau visus iššūkius, su kuriais susiduria valgantys be gliuteno.
-                        Todėl dabar galiu pasidalinti su jumis tuo, ką atradau geriausio.<br/><br/>
-                        Perėjau visus iššūkius, su kuriais susiduria valgantys be gliuteno.
-                        Todėl dabar galiu pasidalinti su jumis tuo, ką atradau geriausio.
-                    </div>
-                    <ul class="uk-custom-ul uk-list uk-list-striped">
-                        <li>Išbandyti ir atrinkti produktai</li>
-                        <li>Išbandyti ir atrinkti produktai</li>
-                        <li>Išbandyti ir atrinkti produktai</li>
-                        <li>Išbandyti ir atrinkti produktai</li>
-                    </ul>
-                    <div class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</div>
+                    <h2><?= blockFixer('b0_h2')?></h2> <!-- b0_h2 -->
+                    <div class="h2-u underText"><?= blockFixer('b0_underText')?></div><!-- b0_underText -->
+                    <ul class="uk-custom-ul uk-list uk-list-striped"><?= blockFixer('b0_ul')?></ul><!-- b0_ul -->
+                    <div class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b0_button')?></div> <!-- b0_button -->
                 </div>
             </div>
         </div>
@@ -89,21 +87,10 @@
             <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                 <div></div>
                 <div>
-                    <h2>Mėgaukitės maistu, kuris padeda jums jaustis gerai!</h2>
-                    <div class="h2-u underText">
-                        Viskas prasidėjo nuo diagnuozuotos celiakijos.<br/><br/>
-                        Perėjau visus iššūkius, su kuriais susiduria valgantys be gliuteno.
-                        Todėl dabar galiu pasidalinti su jumis tuo, ką atradau geriausio.<br/><br/>
-                        Perėjau visus iššūkius, su kuriais susiduria valgantys be gliuteno.
-                        Todėl dabar galiu pasidalinti su jumis tuo, ką atradau geriausio.
-                    </div>
-                    <ul class="uk-custom-ul uk-list uk-list-striped">
-                        <li>Išbandyti ir atrinkti produktai</li>
-                        <li>Išbandyti ir atrinkti produktai</li>
-                        <li>Išbandyti ir atrinkti produktai</li>
-                        <li>Išbandyti ir atrinkti produktai</li>
-                    </ul>
-                    <div class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</div>
+                    <h2><?= blockFixer('b1_h2')?></h2> <!-- b1_h2 -->
+                    <div class="h2-u underText"><?= blockFixer('b1_underText')?></div> <!-- b1_underText -->
+                    <ul class="uk-custom-ul uk-list uk-list-striped"><?= blockFixer('b1_ul')?></ul>
+                    <div class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b1_button')?></div> <!-- b1_button -->
                 </div>
             </div>
         </div>
@@ -116,37 +103,17 @@
         <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid uk-lightbox>
             <div class="uk-custom-self-center">
                 <div>
-                    <h2>Atsisakius tiek nedaug, gauname tiek daug!</h2>
-                    <div class="h2-u underText">Viskas prasidėjo nuo diagnuozuotos celiakijos.</div>
-                    <a href="./assets/img/bg-l-0.jpg" class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</a>
+                    <h2><?= blockFixer('b2_h2')?></h2> <!-- b2_h2 -->
+                    <div class="h2-u underText"><?= blockFixer('b2_underText')?></div><!-- b2_underText -->
+                    <a href="./assets/img/bg-l-0.jpg" class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b2_button')?></a> <!-- b2_button -->
                 </div>
             </div>
             <div class="uk-custom-gallery">
                 <div class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center" uk-grid="parallax: 150">
                     <!-- first line -->
-                    <div>
-                        <a href="./assets/img/bg-l-0.jpg">
-                            <img data-src="./assets/img/bg-l-0.jpg" uk-img>
-                        </a>
-                        <a href="./assets/img/bg-r-0.jpg">
-                            <img data-src="./assets/img/bg-r-0.jpg" uk-img>
-                        </a>
-                        <a href="./assets/img/bg-l-0.jpg">
-                            <img data-src="./assets/img/bg-l-0.jpg" uk-img>
-                        </a>
-                    </div>
+                    <div><?= blockFixer('b2_imagesL1')?></div><!-- b2_imagesL1 -->
                     <!-- second line -->
-                    <div>
-                        <a href="./assets/img/bg-r-0.jpg">
-                            <img data-src="./assets/img/bg-r-0.jpg" uk-img>
-                        </a>
-                        <a href="./assets/img/bg-l-0.jpg">
-                            <img data-src="./assets/img/bg-l-0.jpg" uk-img>
-                        </a>
-                        <a href="./assets/img/bg-r-0.jpg">
-                            <img data-src="./assets/img/bg-r-0.jpg" uk-img>
-                        </a>
-                    </div>
+                    <div><?= blockFixer('b2_imagesL2')?></div><!-- b2_imagesL1 -->
                 </div>
             </div>
         </div>
@@ -156,18 +123,18 @@
 <!-- section b3 -->
 <section class="sec-b3 uk-section uk-background-cover" data-src="./assets/img/bg-m-0.jpg" uk-img>
     <div class="uk-container">
-        <h2>Jauskitės geriau valgydami viską</h2>
+        <h2><?= blockFixer('b3_h2')?></h2> <!-- b3_h2 -->
         <div class="uk-custom-grid uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
             <div>
-                <div>Man buvo diagnozuota celiakija vos prieš kelis mėnesius. Iš pradžių tikrai viskas atrodė sudėtinga, tiesiog nežinojau, ką dabar valgyti. Juk įpratus visa šeima prie normalaus maisto, turime savo rutiną. Ieškojau informacijos ir prekių internete, tačiau po kelių valandų tiesiog visko atrodo per daug. Netyčia atradau šią parduotuvę ir labai džiugiuosi, kadangi čia radau žmogišką kontaktą, Jurgita visą tą patį praėjo pati ir galėjo man patarti, pasidalinti su manimi būtent tuo, ko man labiausiai reikėjo.</div>
+                <div><?= blockFixer('b3_block_a')?></div> <!-- b3_block_a -->
             </div>
             <div>
-                <div>Man buvo diagnozuota celiakija vos prieš kelis mėnesius. Iš pradžių tikrai viskas atrodė sudėtinga, tiesiog nežinojau, ką dabar valgyti. Juk įpratus visa šeima prie normalaus maisto, turime savo rutiną. Ieškojau informacijos ir prekių internete, tačiau po kelių valandų tiesiog visko atrodo per daug. Netyčia atradau šią parduotuvę ir labai džiugiuosi, kadangi čia radau žmogišką kontaktą, Jurgita visą tą patį praėjo pati ir galėjo man patarti, pasidalinti su manimi būtent tuo, ko man labiausiai reikėjo.</div>
+                <div><?= blockFixer('b3_block_b')?></div> <!-- b3_block_b -->
             </div>
         </div>
         <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
             <div>
-                <div class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</div>
+                <div class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b3_button')?></div> <!-- b3_button -->
             </div>
             <div class="uk-text-right uk-margin-top">
                 <img data-src="./assets/img/text-0.png" uk-img>
@@ -179,27 +146,11 @@
 <!-- section b4 -->
 <section class="sec-b4 uk-section">
     <div class="uk-container">
-        <div class="h2">Griaunu mitą, kad sveikas maistas neskanus ir brangus</div>
-        <div class="h2-u underText">Mūsų partneriai, kurie rūpinasi, kad kiekvieną dieną jaustumėtes gerai ir turėtumėte daugiau energijos</div>
-        <div class="uk-flex-center uk-child-width-auto uk-margin-large-top uk-margin-large-bottom" uk-grid>
-            <div>
-                <img data-src="./assets/img/just-img.jpg" uk-img>
-            </div>
-            <div>
-                <img data-src="./assets/img/just-img.jpg" uk-img>
-            </div>
-            <div>
-                <img data-src="./assets/img/just-img.jpg" uk-img>
-            </div>
-            <div>
-                <img data-src="./assets/img/just-img.jpg" uk-img>
-            </div>
-            <div>
-                <img data-src="./assets/img/just-img.jpg" uk-img>
-            </div>
-        </div>
+        <div class="h2"><?= blockFixer('b4_h2')?></div> <!-- b4_h2 -->
+        <div class="h2-u underText"><?= blockFixer('b4_underText')?></div> <!-- b4_underText -->
+        <div class="uk-flex-center uk-child-width-auto uk-margin-large-top uk-margin-large-bottom" uk-grid><?= blockFixer('b4_images')?></div><!-- b4_images -->
         <div class="uk-text-center">
-            <div class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</div>
+            <div class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b4_button')?></div> <!-- b4_button -->
         </div>
     </div>
 </section>
@@ -211,5 +162,7 @@
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js" crossorigin="anonymous" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit-icons.min.js" crossorigin="anonymous" defer></script>
+
+<?= $Wcms->js() ?>
 </body>
 </html>
