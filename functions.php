@@ -26,8 +26,8 @@ function blockFixer(String $name = null)
         // b2
         'b2_h2' => 'Atsisakius tiek nedaug, gauname tiek daug!',
         'b2_underText' => 'Viskas prasidėjo nuo diagnuozuotos celiakijos.',
-        'b2_imagesL1' => '<a href="./assets/img/bg-l-0.jpg"><img data-src="./assets/img/bg-l-0.jpg" uk-img></a><a href="./assets/img/bg-r-0.jpg"><img data-src="./assets/img/bg-r-0.jpg" uk-img></a><a href="./assets/img/bg-l-0.jpg"><img data-src="./assets/img/bg-l-0.jpg" uk-img></a>',
-        'b2_imagesL2' => '<a href="./assets/img/bg-r-0.jpg"><img data-src="./assets/img/bg-r-0.jpg" uk-img></a><a href="./assets/img/bg-l-0.jpg"><img data-src="./assets/img/bg-l-0.jpg" uk-img></a><a href="./assets/img/bg-r-0.jpg"><img data-src="./assets/img/bg-r-0.jpg" uk-img></a>',
+        'b2_imagesL1' => '<a href="'.$Wcms->asset('assets/img/bg-l-0.jpg').'"><img data-src="'.$Wcms->asset('assets/img/bg-l-0.jpg').'" uk-img></a><a href="'.$Wcms->asset('assets/img/bg-r-0.jpg').'"><img data-src="'.$Wcms->asset('assets/img/bg-r-0.jpg').'" uk-img></a><a href="'.$Wcms->asset('assets/img/bg-l-0.jpg').'"><img data-src="'.$Wcms->asset('assets/img/bg-l-0.jpg').'" uk-img></a>',
+        'b2_imagesL2' => '<a href="'.$Wcms->asset('assets/img/bg-r-0.jpg').'"><img data-src="'.$Wcms->asset('assets/img/bg-r-0.jpg').'" uk-img></a><a href="'.$Wcms->asset('assets/img/bg-l-0.jpg').'"><img data-src="'.$Wcms->asset('assets/img/bg-l-0.jpg').'" uk-img></a><a href="'.$Wcms->asset('assets/img/bg-r-0.jpg').'"><img data-src="'.$Wcms->asset('assets/img/bg-r-0.jpg').'" uk-img></a>',
         'b2_button' => 'Žiūrėti 100% be gliuteno produktus',
         // b3,
         'b3_h2' => 'Jauskitės geriau valgydami viską',
@@ -37,7 +37,7 @@ function blockFixer(String $name = null)
         // b4
         'b4_h2' => 'Griaunu mitą, kad sveikas maistas neskanus ir brangus',
         'b4_underText' => 'Mūsų partneriai, kurie rūpinasi, kad kiekvieną dieną jaustumėtes gerai ir turėtumėte daugiau energijos',
-        'b4_images' => '<div><img data-src="./assets/img/just-img.jpg" uk-img></div><div><img data-src="./assets/img/just-img.jpg" uk-img></div>',
+        'b4_images' => '<div><img data-src="'.$Wcms->asset('assets/img/just-img.jpg.jpg').'" uk-img></div><div><img data-src="'.$Wcms->asset('assets/img/just-img.jpg.jpg').'" uk-img></div>',
         'b4_button' => 'Žiūrėti 100% be gliuteno produktus'
     ];
 
