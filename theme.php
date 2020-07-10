@@ -35,7 +35,7 @@
         <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
             <div class="uk-navbar-left">
                 <a class="uk-navbar-item uk-logo" href="#">
-                    <img data-src="./img/logo.jpg" uk-img />
+                    <img data-src="./assets/img/logo.jpg" uk-img />
                 </a>
             </div>
         </nav>
@@ -43,7 +43,7 @@
 </div>
 
 <!-- section head -->
-<section class="sec-head uk-background-cover uk-section" data-src="./img/header.jpg" uk-img>
+<section class="sec-head uk-background-cover uk-section" data-src="./assets/img/header.jpg" uk-img>
     <div class="uk-container">
         <h1>Jauskitės geriau valgydami viską</h1>
         <div class="h1-u underText">mėgaukis skaniu gyvenimu be gliuteno</div>
@@ -57,7 +57,7 @@
 
 <!-- section b0 -->
 <section class="sec-b0 uk-section">
-    <div class="uk-custom-cheat-bg uk-background-contain uk-background-center-right uk-background-image@m" data-src="./img/cheat-img-0.jpg" uk-img>
+    <div class="uk-custom-cheat-bg uk-background-contain uk-background-center-right uk-background-image@m" data-src="./assets/img/cheat-img-0.jpg" uk-img>
         <div class="uk-container">
             <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                 <div>
@@ -83,8 +83,8 @@
 </section>
 
 <!-- section b1 -->
-<section class="sec-b1 uk-section uk-background-cover" data-src="./img/bg-m-0.jpg" uk-img>
-    <div class="uk-custom-cheat-bg uk-background-contain uk-background-center-left uk-background-image@m" data-src="./img/bg-l-0.jpg" uk-img>
+<section class="sec-b1 uk-section uk-background-cover" data-src="./assets/img/bg-m-0.jpg" uk-img>
+    <div class="uk-custom-cheat-bg uk-background-contain uk-background-center-left uk-background-image@m" data-src="./assets/img/bg-l-0.jpg" uk-img>
         <div class="uk-container">
             <div class="uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
                 <div></div>
@@ -118,33 +118,33 @@
                 <div>
                     <h2>Atsisakius tiek nedaug, gauname tiek daug!</h2>
                     <div class="h2-u underText">Viskas prasidėjo nuo diagnuozuotos celiakijos.</div>
-                    <a href="./img/bg-l-0.jpg" class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</a>
+                    <a href="./assets/img/bg-l-0.jpg" class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</a>
                 </div>
             </div>
             <div class="uk-custom-gallery">
                 <div class="uk-child-width-1-1@s uk-child-width-1-2@m uk-text-center" uk-grid="parallax: 150">
                     <!-- first line -->
                     <div>
-                        <a href="./img/bg-l-0.jpg">
-                            <img data-src="./img/bg-l-0.jpg" uk-img>
+                        <a href="./assets/img/bg-l-0.jpg">
+                            <img data-src="./assets/img/bg-l-0.jpg" uk-img>
                         </a>
-                        <a href="./img/bg-r-0.jpg">
-                            <img data-src="./img/bg-r-0.jpg" uk-img>
+                        <a href="./assets/img/bg-r-0.jpg">
+                            <img data-src="./assets/img/bg-r-0.jpg" uk-img>
                         </a>
-                        <a href="./img/bg-l-0.jpg">
-                            <img data-src="./img/bg-l-0.jpg" uk-img>
+                        <a href="./assets/img/bg-l-0.jpg">
+                            <img data-src="./assets/img/bg-l-0.jpg" uk-img>
                         </a>
                     </div>
                     <!-- second line -->
                     <div>
-                        <a href="./img/bg-r-0.jpg">
-                            <img data-src="./img/bg-r-0.jpg" uk-img>
+                        <a href="./assets/img/bg-r-0.jpg">
+                            <img data-src="./assets/img/bg-r-0.jpg" uk-img>
                         </a>
-                        <a href="./img/bg-l-0.jpg">
-                            <img data-src="./img/bg-l-0.jpg" uk-img>
+                        <a href="./assets/img/bg-l-0.jpg">
+                            <img data-src="./assets/img/bg-l-0.jpg" uk-img>
                         </a>
-                        <a href="./img/bg-r-0.jpg">
-                            <img data-src="./img/bg-r-0.jpg" uk-img>
+                        <a href="./assets/img/bg-r-0.jpg">
+                            <img data-src="./assets/img/bg-r-0.jpg" uk-img>
                         </a>
                     </div>
                 </div>
@@ -154,7 +154,7 @@
 </section>
 
 <!-- section b3 -->
-<section class="sec-b3 uk-section uk-background-cover" data-src="./img/bg-m-0.jpg" uk-img>
+<section class="sec-b3 uk-section uk-background-cover" data-src="./assets/img/bg-m-0.jpg" uk-img>
     <div class="uk-container">
         <h2>Jauskitės geriau valgydami viską</h2>
         <div class="uk-custom-grid uk-child-width-1-1@s uk-child-width-1-2@m" uk-grid>
@@ -170,7 +170,7 @@
                 <div class="uk-custom-green-button uk-margin-top uk-button">Žiūrėti 100% be gliuteno produktus</div>
             </div>
             <div class="uk-text-right uk-margin-top">
-                <img data-src="./img/text-0.png" uk-img>
+                <img data-src="./assets/img/text-0.png" uk-img>
             </div>
         </div>
     </div>
@@ -183,19 +183,19 @@
         <div class="h2-u underText">Mūsų partneriai, kurie rūpinasi, kad kiekvieną dieną jaustumėtes gerai ir turėtumėte daugiau energijos</div>
         <div class="uk-flex-center uk-child-width-auto uk-margin-large-top uk-margin-large-bottom" uk-grid>
             <div>
-                <img data-src="./img/just-img.jpg" uk-img>
+                <img data-src="./assets/img/just-img.jpg" uk-img>
             </div>
             <div>
-                <img data-src="./img/just-img.jpg" uk-img>
+                <img data-src="./assets/img/just-img.jpg" uk-img>
             </div>
             <div>
-                <img data-src="./img/just-img.jpg" uk-img>
+                <img data-src="./assets/img/just-img.jpg" uk-img>
             </div>
             <div>
-                <img data-src="./img/just-img.jpg" uk-img>
+                <img data-src="./assets/img/just-img.jpg" uk-img>
             </div>
             <div>
-                <img data-src="./img/just-img.jpg" uk-img>
+                <img data-src="./assets/img/just-img.jpg" uk-img>
             </div>
         </div>
         <div class="uk-text-center">
