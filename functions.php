@@ -37,7 +37,7 @@ function blockFixer(String $name = null)
         // b4
         'b4_h2' => 'Griaunu mitą, kad sveikas maistas neskanus ir brangus',
         'b4_underText' => 'Mūsų partneriai, kurie rūpinasi, kad kiekvieną dieną jaustumėtes gerai ir turėtumėte daugiau energijos',
-        'b4_images' => '<div><img data-src="'.$Wcms->asset('assets/img/just-img.jpg.jpg').'" uk-img></div><div><img data-src="'.$Wcms->asset('assets/img/just-img.jpg.jpg').'" uk-img></div>',
+        'b4_images' => '<div><img data-src="'.$Wcms->asset('assets/img/just-img.jpg').'" uk-img></div><div><img data-src="'.$Wcms->asset('assets/img/just-img.jpg').'" uk-img></div>',
         'b4_button' => 'Žiūrėti 100% be gliuteno produktus'
     ];
 
