@@ -19,8 +19,8 @@
 
     <title><?= $Wcms->get('config', 'siteTitle') ?> - <?= $Wcms->page('title') ?></title>
     <?php if($_SESSION['loggedIn'] === true){ ?>
-    <!-- CSS Style -->
-    <link rel="stylesheet" rel="preload" as="style" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- CSS Style -->
+        <link rel="stylesheet" rel="preload" as="style" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <?php } ?>
     <!-- UIkit CSS -->
     <link rel="stylesheet" rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/css/uikit.min.css" crossorigin="anonymous"/>
@@ -71,6 +71,7 @@
                 <div><span class="block-item"><?= blockFixer('head_blocks_c')?></span></div> <!-- head_blocks_c -->
             </div>
         </div>
+        <div class="bg-line"><img data-src="<?= $Wcms->asset('assets/img/line.png');?>" uk-img></div>
     </section>
 
     <!-- section b0 -->
@@ -86,6 +87,10 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="bg-sides">
+            <div class="bg-side-left" data-src="<?= $Wcms->asset('assets/img/bg_left.png');?>" uk-img></div>
+            <!--<div class="bg-side-right" data-src="<?= $Wcms->asset('assets/img/bg_right.png');?>" uk-img></div>-->
         </div>
     </section>
 
@@ -104,6 +109,7 @@
                 </div>
             </div>
         </div>
+        <div class="bg-line"><img data-src="<?= $Wcms->asset('assets/img/line.png');?>" uk-img></div>
     </section>
 
     <!-- section b2 -->
@@ -114,7 +120,7 @@
                     <div>
                         <h2><?= blockFixer('b2_h2')?></h2> <!-- b2_h2 -->
                         <div class="h2-u underText"><?= blockFixer('b2_underText')?></div><!-- b2_underText -->
-                        <a href="<?= $Wcms->asset('assets/img/bg-l-0.jpg'); ?>" class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b2_button')?></a> <!-- b2_button -->
+                        <a href="<?= $Wcms->asset('assets/img/bg-l-0.jpg'); ?>" class="uk-visible@m uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b2_button')?></a> <!-- b2_button -->
                     </div>
                 </div>
                 <div class="uk-custom-gallery">
@@ -122,10 +128,19 @@
                         <!-- first line -->
                         <div><?= blockFixer('b2_imagesL1')?></div><!-- b2_imagesL1 -->
                         <!-- second line -->
-                        <div><?= blockFixer('b2_imagesL2')?></div><!-- b2_imagesL1 -->
+                        <div class="uk-visible@m"><?= blockFixer('b2_imagesL2')?></div><!-- b2_imagesL1 -->
                     </div>
+                    <?php if(!$Wcms->loggedIn) { ?>
+                        <div class="uk-hidden@m">
+                            <a href="<?= $Wcms->asset('assets/img/bg-l-0.jpg'); ?>" class="uk-custom-green-button uk-margin-top uk-button"><?= blockFixer('b2_button')?></a> <!-- b2_button -->
+                        </div>
+                    <?php } ?>
                 </div>
             </div>
+        </div>
+        <div class="bg-sides">
+            <div class="bg-side-left" data-src="<?= $Wcms->asset('assets/img/bg_left.png');?>" uk-img></div>
+            <div class="bg-side-right" data-src="<?= $Wcms->asset('assets/img/bg_right.png');?>" uk-img></div>
         </div>
     </section>
 
@@ -150,6 +165,7 @@
                 </div>
             </div>
         </div>
+        <div class="bg-line"><img data-src="<?= $Wcms->asset('assets/img/line.png');?>" uk-img></div>
     </section>
 
     <!-- section b4 -->
@@ -168,9 +184,9 @@
 
 <!-- JS Scripts -->
 <?php if($_SESSION['loggedIn'] === true){ ?>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous" defer></script>
 <?php } ?>
 <!-- UIkit JS -->
 <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.4/dist/js/uikit.min.js" crossorigin="anonymous" defer></script>
